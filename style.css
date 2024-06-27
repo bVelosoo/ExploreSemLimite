@@ -1,0 +1,243 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:root {
+  font-size: 62.5%;
+  font-family: "Mulish", sans-serif;
+  --pink: #b52184;
+  --white: white;
+  --blue: #312d64;
+  --gradient: linear-gradient(
+    135deg,
+    rgba(52, 49, 147, 1) 0%,
+    rgba(48, 44, 99, 1) 100%
+  );
+  --blueGradient: rgb(52, 49, 147);
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1.6rem;
+  color: var(--blue);
+  font-family: "Mulish", sans-serif;
+}
+h1 {
+  color: var(--pink);
+  font-weight: 900;
+}
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+#page-01 {
+  min-height: 68rem;
+  text-align: center;
+  animation: appear 2s;
+}
+#page-01 h1 {
+  margin-top: 2rem;
+  font-size: 3.2rem;
+}
+#page-01 button {
+  margin-top: 3.5rem;
+  width: 6rem;
+  height: 10.5rem;
+  border-radius: 76rem;
+  border: 0.4rem solid var(--pink);
+  background-color: var(--white);
+}
+@keyframes appear {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+#page-02 {
+  max-height: 125rem;
+  background: var(--gradient);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  padding: 5rem 0;
+}
+.cards {
+  height: 34rem;
+  width: 35rem;
+  background-color: var(--white);
+  border-radius: 2rem;
+  padding: 2.5rem;
+}
+.card-01{
+  animation: moveRight 1s;
+}
+.card-02{
+  animation: moveRight 1.5s;
+}
+.card-03{
+  animation: moveRight 2s;
+}
+.cards img {
+  width: 8rem;
+  height: 8rem;
+}
+.cards h1 {
+  padding: 2rem 0 1.5rem 0;
+}
+.cards p {
+  font-weight: 600;
+  color: var(--blue);
+}
+@keyframes moveRight{
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.4rem;
+}
+#page-03 {
+  min-height: 56.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page-03 h1 {
+  font-size: 3.2rem;
+  margin-bottom: 4.5rem;
+}
+.name {
+  background: url(./assets/InputText.svg) no-repeat left center;
+  background-position-x: 1.4rem;
+  padding-left: 5rem;
+}
+.mail {
+  background: url(./assets/InputEmail.svg) no-repeat left center;
+  background-position-x: 1.4rem;
+  padding-left: 5rem;
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+input,
+textarea {
+  border-radius: 1.6rem;
+  border: 1.5px solid var(--blue);
+  outline: none;
+  min-width: 35rem;
+  min-height: 4.8rem;
+  font-family: "Mulish", sans-serif;
+}
+textarea {
+  min-height: 12.6rem;
+  padding: 1.6rem;
+}
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+}
+#page-03 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 4.5rem;
+  min-width: 15rem;
+  border-radius: 1.6rem;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: "Mulish", sans-serif;
+  background: var(--gradient);
+  color: var(--white);
+}
+button:hover {
+  cursor: pointer;
+}
+footer {
+  background: var(--gradient);
+  height: 7.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+@media (min-width: 1440px) {
+  #page-01 {
+    min-height: 83.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+  }
+  #page-01 h1 {
+    margin-top: 30rem;
+    font-size: 5.8rem;
+  }
+  #page-01 h2 {
+    font-size: 3.2rem;
+  }
+  .Astronalta {
+    min-height: 72rem;
+  }
+  .Explore {
+    min-height: 83.5rem;
+    padding-left: 10rem;
+  }
+  #page-01 button {
+    margin-top: 18rem;
+  }
+  #page-02 {
+    min-height: 58rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 6rem;
+    padding: 6.5rem 11rem;
+  }
+  .cards {
+    height: 45rem;
+    width: 36rem;
+  }
+  .cards img {
+    width: 9.7rem;
+    height: 9.7rem;
+  }
+  .cards h1 {
+    font-size: 3.5rem;
+  }
+  .cards p {
+    font-size: 2rem;
+  }
+  #page-03 {
+    justify-content: flex-start;
+    background: url(./assets/Stars.svg) no-repeat;
+    background-position: right;
+  }
+  #page-03 h1 {
+    font-size: 4.2rem;
+    margin-bottom: 3.5rem;
+  }
+  .contato {
+    margin-left: 11rem;
+  }
+  input,
+  textarea {
+    min-width: 59rem;
+  }
+}
